@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router";
-import MainLayout from "../src/layouts/main-layout";
+import MainLayout from "../layouts/main-layout";
 
 const router = createBrowserRouter([
     {
@@ -10,7 +10,7 @@ const router = createBrowserRouter([
                 index: true,
                 lazy: {
                     Component: async() =>{
-                        const component = await import("../src/pages/predict-diabetes/predict-diabetes-page")
+                        const component = await import("../pages/predict-diabetes/predict-diabetes-page")
                         return component.default
                     }
                 }
