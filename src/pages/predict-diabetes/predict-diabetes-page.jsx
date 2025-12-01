@@ -2,7 +2,7 @@ import { useState } from "react"
 import FormPredict from "./components/form-predict"
 
 function PredictDiabetesPage() {
-    const [setPrediction] = useState(null)
+    const [predict,setPrediction] = useState(null)
     const [isloading, setIsloading] = useState(false)
     if (isloading) {
         <img src="https://media.tenor.com/I9qt03YKkjQAAAAe/monkey-thinking.png" alt="" />
@@ -14,7 +14,7 @@ function PredictDiabetesPage() {
                     <FormPredict isloading={isloading} setIsloading={setIsloading} setPrediction={setPrediction}/>
                 </div>
                 <div className="p-5">
-                    Hasil Prediksi : sepertinya{setPrediction === 0 ? "positif" :  "negatif"}
+                    Hasil Prediksi : sepertinya {predict === null ? "Belum ada" : predict === 0 ?"negatif" : "Positif"}
                     {/* <img src="https://preview.redd.it/monkey-thinking-v0-j08u39bvfxrf1.jpg?width=640&crop=smart&auto=webp&s=e29d499be5a7b19b66c0a46df097d5677a94b7e3" alt="" /> */}
                 </div>
             </div>
