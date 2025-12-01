@@ -14,7 +14,7 @@ function PredictDiabetesPage() {
                     <FormPredict isloading={isloading} setIsloading={setIsloading} setPrediction={setPrediction}/>
                 </div>
                 <div className="p-5">
-                    Hasil Prediksi : sepertinya {predict === null ? "Belum ada" : predict === 0 ?"negatif" : "Positif"}
+                    Hasil Prediksi : sepertinya {predict === 0 ?"negatif" : "Positif"}
                     {/* <img src="https://preview.redd.it/monkey-thinking-v0-j08u39bvfxrf1.jpg?width=640&crop=smart&auto=webp&s=e29d499be5a7b19b66c0a46df097d5677a94b7e3" alt="" /> */}
                 </div>
             </div>
