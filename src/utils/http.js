@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const https = axios.create({
-    baseURL: "https://flask-model-diabetes-production.up.railway.app/api",
+    baseURL: "http://127.0.0.1:5000/api",
     headers: {
         Accept: "application/json"
     }

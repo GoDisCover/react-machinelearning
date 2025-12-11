@@ -14,8 +14,19 @@ const router = createBrowserRouter([
                         return component.default
                     }
                 }
+            },
+            {
+                path: "predict-rps",
+                lazy: {
+                    Component: async() =>{
+                        const component = await import("../pages/predict-diabetes/predict-rps-page")
+                        return component.default
+                    }
+                }
             }
         ]
     },
+    
+
 ]);
 export default router;
